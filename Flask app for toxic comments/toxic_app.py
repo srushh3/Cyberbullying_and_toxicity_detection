@@ -81,15 +81,13 @@ def predict():
     out_thr = round(pred_thr[0], 2)
     out_ide = round(pred_ide[0], 2)
 
-    print(out_tox)
-
     return render_template('index_toxic.html', 
                             pred_tox = 'Prob (Toxic): {}'.format(out_tox),
                             pred_sev = 'Prob (Severe Toxic): {}'.format(out_sev), 
                             pred_obs = 'Prob (Obscene): {}'.format(out_obs),
                             pred_ins = 'Prob (Insult): {}'.format(out_ins),
                             pred_thr = 'Prob (Threat): {}'.format(out_thr),
-                            pred_ide = 'Prob (Identity Hate): {}'.format(out_ide)                        
+                            pred_ide = 'Prob (Identity Hate): {}'.format(out_ide)                     
                             )
      
 # Server reloads itself if code changes so no need to keep restarting:
